@@ -19,6 +19,32 @@ struct s_studente {
 typedef struct s_studente studente;
 
 int main(int argc, char** argv) {
+    //definizioni delle variabli
+    int i;
+    studente k[N];
+    FILE *puntaFile;
+    
+    puntaFile = fopen("elenco.csv", "wb");
+    
+    fprintf(puntaFile,"nome; cognome; eta; classe;\n");
+    
+    for(i=0;i<N;i++)
+    {
+        printf("inserisci il nome\n ");
+        scanf("%s;", k[i].nome);
+        fprintf(puntaFile,"%s;",k[i].nome);
+        printf("inserisci il cognome\n ");
+        scanf("%s;", k[i].cognome);
+        fprintf(puntaFile,"%s;",k[i].cognome);
+        printf("inserisci l'eta'\n ");
+        scanf("%d;", &k[i].eta);
+        fprintf(puntaFile,"%d;",k[i].eta);
+        printf("inserisci la classe\n ");
+        scanf("%s;", &k[i].classe);
+        fprintf(puntaFile,"%s\n",k[i].classe);
+    }
+    
+    fclose(puntaFile);
     
     return (EXIT_SUCCESS);
 }
