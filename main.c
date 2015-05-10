@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     studente k[N];
     FILE *puntaFile;
     
-    puntaFile = fopen("elenco.csv", "wb");
+    puntaFile = fopen("elenco.csv", "w");
     
     fprintf(puntaFile,"nome; cognome; eta; classe;\n");
     
